@@ -1,8 +1,9 @@
 #include "JsonSerializer.h"
 #include "JsonDeserializer.h"
 
-struct Person
+class Person
 {
+public:
 	int							age;
 	std::string					name;
 	std::vector<std::string>	skills;
@@ -23,8 +24,9 @@ struct Person
 		SIMPLE_DESERIALIZE(skills);
 	}
 };
-struct Club 
+class Club 
 {
+public:
 	std::string					name;
 	std::string					location;
 	std::vector<Person>			memberInfo;
